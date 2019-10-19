@@ -24,7 +24,11 @@ if(__name__ == '__main__'):
                 allowDraw = False
             try:
                 currentLevel = int(sys.argv[2])
-            except TypeError:
+                if(currentLevel > 7):
+                    currentLevel = 7
+                if(currentLevel < 0):
+                    currentLevel = 0
+            except ValueError:
                 print("Level must be a number")
                 allowDraw = False
 
